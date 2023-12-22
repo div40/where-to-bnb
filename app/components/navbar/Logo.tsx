@@ -13,7 +13,7 @@ const Logo = () => {
         width={40}
         src="logo.svg"
       />
-      <h1 className="text-primary text-lg font-semibold">WhereToBnB</h1>
+      <h1 className="text-primary text-lg font-semibold">WhereTo?</h1>
     </div>
   );
 };

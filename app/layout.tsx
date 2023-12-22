@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar/Navbar";
+import Modal from "./components/modals/Modal";
+import RegisterModal from "./components/modals/RegisterModal";
+import ToasterProvider from "./providers/ToasterProvider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -9,7 +12,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "WhereToBnB | Rent rooms online",
+  title: "WhereTo | Rent rooms online",
   description: "Rent rooms online",
 };
 
@@ -21,6 +24,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
+        <ToasterProvider />
+        <RegisterModal />
         <Navbar />
         {children}
       </body>
