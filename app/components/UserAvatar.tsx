@@ -1,11 +1,14 @@
 "use client";
 
 import Image from "next/image";
+interface UserAvatarProps {
+  src: string | null | undefined;
+}
 
-const UserAvatar = () => {
+const UserAvatar: React.FC<UserAvatarProps> = ({ src }) => {
   return (
     <Image
-      src="/placeholder.svg"
+      src={src || "/placeholder.svg"}
       alt="avatar"
       className="rounded-full bg-neutral-100 p-[4px]"
       height={30}
