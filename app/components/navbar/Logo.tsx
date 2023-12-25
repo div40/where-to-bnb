@@ -14,7 +14,7 @@ const Logo = () => {
         className="hidden md:block cursor-pointer"
         height={40}
         width={40}
-        src="logo.svg"
+        src="wheretologo.svg"
       />
       <h1 className="text-primary text-lg font-semibold">WhereTo?</h1>
     </div>
