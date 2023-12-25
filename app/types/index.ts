@@ -1,4 +1,4 @@
-import { User } from "@prisma/client";
+import { Listing, User } from "@prisma/client";
 
 // to fix typescript error because we modified the type of value from date to string
 
@@ -9,4 +9,11 @@ User,
     createdAt: string;
     updatedAt: string;
     emailVerified: string | null;
+}
+
+export type SafeListing = Omit<
+Listing,
+"createdAt"
+> & {
+    createdAt: string;
 }
